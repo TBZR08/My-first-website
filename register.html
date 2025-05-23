@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <title>Register</title>
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(to right, #83a4d4, #b6fbff); /* ใช้สีเหมือนหน้า login */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .register-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      text-align: center;
+    }
+    
+    h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    input {
+      width: 80%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    button {
+      width: 80%;
+      padding: 12px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    
+    button:hover {
+      background: #005fa3;
+      transform: scale(1.05);
+    }
+    
+    p {
+      margin-top: 10px;
+    }
+    
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-box">
+    <h2>Register</h2>
+    <form onsubmit="return register()">
+      <input type="text" id="newUser" placeholder="Username" required />
+      <input type="password" id="newPass" placeholder="Password" required />
+      <button type="submit">สมัครสมาชิก</button>
+    </form>
+    <p>มีบัญชีแล้ว? <a href="login.html">เข้าสู่ระบบ</a></p>
+  </div>
+
+  <script>
+    function register() {
+      const user = document.getElementById("newUser").value;
+      const pass = document.getElementById("newPass").value;
+
+      localStorage.setItem("savedUser", user);
+      localStorage.setItem("savedPass", pass);
+
+      alert("ลงทะเบียนสำเร็จ!");
+      window.location.href = "login.html";
+      return false;
+    }
+  </script>
+</body>
+</html>
