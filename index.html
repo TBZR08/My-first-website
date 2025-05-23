@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Frist web site </title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background: linear-gradient(to right, #83a4d4, #b6fbff);
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 36px;
+      background-color: rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      padding: 20px 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      animation: fadeInUp 1s ease-out forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      animation: bounceIn 1s ease 1s forwards;
+      opacity: 1;
+      transform: scale(0.8);
+
+    }
+
+    button:hover {
+      background: #005fa3;
+      transform: scale(1.05);
+    }
+    p {
+      margin-top: 10px;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>กรุณาเข้าสู่ระบบ</h1>
+  <br>
+  <button><a href="login.html"> เข้าสู่ระบบ </a></button>
+</body>
+</html>
